@@ -11,4 +11,7 @@ export class APIcallsService {
   GETLogin(){
     return this.http.get('https://ngdemoapi.getsandbox.com/login');
   }
+  GETSubmittedTransactions(){
+    return this.http.get('https://ngdemoapi.getsandbox.com/getSubmitedTransactions');
+  }
 }

@@ -1,3 +1,59 @@
-<p>
-  new-transaction works!
-</p>
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12 con-sm-10 col-md-8 col-sm-offset-1 col-md-offset-1">
+    <form (ngSubmit) ="onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="reference">Reference</label>
+        <input type="text" id="reference" class="form-control" ngModel name="reference"/>
+      </div>
+      <div ngModelGroup="CustomerInfo">
+      <div class="form-group">
+        <label for="customer number">Customer number</label>
+        <input type="number" id="customer number" class="form-control" ngModel name="Customer number" />
+      </div>
+      <div class="form-group">
+        <label for="Customer name">Customer name</label>
+        <input type="text" id="Customer name" class="form-control" ngModel name="Customer name"/>
+      </div>
+      <div class="form-group">
+        <label for="customer Address">Customer Address</label>
+        <input type="text" id="customer Address" class="form-control" ngModel name="Customer Address" />
+      </div>
+      <div class="form-group">
+          <label for="customer phone number">Customer phone number</label>
+          <input type="number" id="customer phone number" class="form-control" ngModel name="customer phone number" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="transfer amount">transfer amount</label>
+        <input type="number" id="transfer amount" class="form-control"ngModel name="transfer amount" />
+      </div>
+      <div class="form-group">
+        <label for="transfer currency">transfer currency</label>
+        <select id="transfer currency" class="form-control">
+          <option value="AED">AED</option>
+          <option value="EUR">EUR</option>
+          <option value="CHF">CHF</option>
+          <option value="MUR">MUR</option>
+          <option value="USD">USD</option>
+        </select>
+         </div>
+      <div class="form-group">
+        <label for="beneficiary bank">Beneficiary bank</label>
+        <input type="text" id="beneficiary bank" class="form-control" ngModel name="Beneficiary bank" />
+      </div>
+      <div class="form-group">
+        <label for="beneficiary account number">Beneficiary account number</label>
+        <input type="number" id="beneficiary account number" class="form-control" ngModel name="beneficiary account number"/>
+      </div>
+      <div class="form-group">
+        <label for=" payment details">Payment details</label>
+        <input type="text" id=" payment details" class="form-control" ngModel name="payment details"/>
+      </div>
+      <div>
+        
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

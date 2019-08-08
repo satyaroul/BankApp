@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
-
+import { LogData } from './logdata.model';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements DoCheck {
+  id: string;
+  password: string
+  loginToken: number;
+  constructor(private loginSevice: LoginService) { }
 
-  constructor(private loginSevice : LoginService) { }
-
-  ngOnInit() {
+  Login() {
+    console.log(this.id + this.password);
+    this.loginSevice.login(this.id, this.password);
   }
-  Login(){
-    this.loginSevice.isLogged = true;
+
+  ngDoCheck(){
+    console.log(this.loginSevice.loginToken);
   }
 
 }

@@ -23,7 +23,5 @@ export class LoginService {
       console.log(this.loginToken);
       this.isLogged = true;
     });
-      
-    
   }
 }

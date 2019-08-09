@@ -11,6 +11,7 @@ import { TransactionsComponent } from './components/transactions/transactions.co
 import { HeaderComponent } from './components/header/header.component';
 import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
     TransactionsComponent,
     HeaderComponent,
     AppLayoutComponent,
+    
   ],
   imports: [
     BrowserModule, 

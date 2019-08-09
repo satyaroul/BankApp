@@ -17,6 +17,9 @@ reference : string;
   }
 
   onSubmit(form : NgForm){
+    form.value.reference = this.reference;
+    console.log(form.value.reference);
+    console.log(form.value)
     console.log(form);
   }
   prefill(){

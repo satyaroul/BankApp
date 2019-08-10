@@ -1,24 +1,44 @@
-<div class="container" style="margin-top: 20%">
+<div class="container">
+    <h4 style="text-align: center">Welcome to the Bank application</h4>
   <div class="row justify-content-center">
-    <div class="col-5">
-      <h4 style="text-align: center">Welcome to the Bank application</h4>
-      <div class="card" style="width: 30rem;">
+
+    <div class="col-6" style="margin-top: 10%; padding-left: 5px">
+        
+        <div class="card" style="width: 30rem;">
+            <div class="card-body" style="text-align: center">
+              <div class="input-group mb-3">
+                <h3>About to the Bank application</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore praesentium id reprehenderit itaque
+                  molestias quo eaque accusantium dignissimos assumenda aperiam ipsum, amet veritatis recusandae velit
+                  obcaecati voluptatem totam hic nobis.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore praesentium id reprehenderit itaque
+                      molestias quo eaque accusantium dignissimos assumenda aperiam ipsum, amet veritatis recusandae velit
+                      obcaecati voluptatem totam hic nobis.</p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="col-6" style="margin-top: 17%;">
+      <div class="card" style="width: 30rem; ">
         <div class="card-body" style="text-align: center">
           <h5 class="card-title">Login</h5>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Login ID</span>
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="id">
+            <input type="email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+              [(ngModel)]="id" required>
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
             </div>
-            <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="password">
+            <input type="password" class="form-control" aria-label="Default"
+              aria-describedby="inputGroup-sizing-default" [(ngModel)]="password" required>
           </div>
-          <button class="btn btn-primary" (click)="Login()">Login</button>
-          <p *ngIf="invalid" style="color: red">Invalid Login ID or Password</p>
+          <button class="btn btn-primary" [disabled]="disable" (click)="Login()" type="submit">Login</button>
+          <p *ngIf="invalid" style="color: red; margin-top: 2%">Invalid Login ID or Password</p>
         </div>
       </div>
     </div>

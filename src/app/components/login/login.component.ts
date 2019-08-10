@@ -12,6 +12,7 @@ export class LoginComponent implements DoCheck {
   password: string
   loginToken: string;
   invalid : Boolean;
+  disable = true;
   constructor(private loginSevice: LoginService, private route : Router) { }
 
   Login() {
@@ -21,6 +22,11 @@ export class LoginComponent implements DoCheck {
   }
 
   ngDoCheck(){
+    if (this.id == null || this.password == null) {
+      this.disable = true
+    }else{
+      this.disable=false;
+    }
     this.invalid = this.loginSevice.invalid;
   }
 

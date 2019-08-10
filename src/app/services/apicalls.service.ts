@@ -16,8 +16,12 @@ export class APIcallsService {
     return this.http.get('https://ngdemoapi.getsandbox.com/getSubmitedTransactions');
   }
 
-  POSTSubmitingNewTransactions(newtrx :newTransactionModal){
+  POSTSubmitingNewTransactions(newtrx){
     return this.http.post('https://ngdemoapi.getsandbox.com/saveTransaction',newtrx);
+  }
+
+  GETDetailsByID(ID : string){
+    return this.http.get('https://ngdemoapi.getsandbox.com/customerById/'+ID);
   }
 }
 

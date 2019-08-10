@@ -10,6 +10,8 @@ import { NewTransactionComponent } from './components/new-transaction/new-transa
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
     TransactionsComponent,
     HeaderComponent,
     AppLayoutComponent,
+    
   ],
   imports: [
     BrowserModule, 
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,9 +15,10 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="password">
+            <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="password">
           </div>
           <button class="btn btn-primary" (click)="Login()">Login</button>
+          <p *ngIf="invalid" style="color: red">Invalid Login ID or Password</p>
         </div>
       </div>
     </div>

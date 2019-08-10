@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { APIcallsService } from './apicalls.service';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -8,20 +9,29 @@ import { APIcallsService } from './apicalls.service';
 })
 export class LoginService {
   isLogged = false;
-  loginToken : Number;
-  constructor(private http: HttpClient, private APIs: APIcallsService) { }
+  loginToken: string;
+  invalid = false;
+  constructor(private http: HttpClient, private APIs: APIcallsService, private route: Router) { }
 
-  login(id , password) {
+  login(id, password) {
     this.APIs.GETLogin().subscribe(data => {
-      console.log(data);
       for (var key in data) {
         // console.log(data[key].token);
         if (data[key].email == id && data[key].password == password) {
-          this.loginToken = data[key].token; 
+          this.loginToken = data[key].token;
+          window.sessionStorage.setItem("loginToken",this.loginToken);
+          this.route.navigate(['/overview']);
+          this.invalid = false;
+          this.isLogged = true;
+          break;
+        }else{
+          this.invalid = true;
+          this.route.navigate(['/']);
         }
-      }
-      console.log(this.loginToken);
-      this.isLogged = true;
+      }    
     });
+  }
+  logout(){
+    window.sessionStorage.removeItem("loginToken");
   }
 }

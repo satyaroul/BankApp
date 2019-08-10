@@ -10,17 +10,18 @@ import { Router } from '@angular/router';
 export class LoginComponent implements DoCheck {
   id: string;
   password: string
-  loginToken: number;
+  loginToken: string;
+  invalid : Boolean;
   constructor(private loginSevice: LoginService, private route : Router) { }
 
   Login() {
     console.log(this.id + this.password);
     this.loginSevice.login(this.id, this.password);
+
   }
 
   ngDoCheck(){
-    console.log(this.loginSevice.loginToken);
-
+    this.invalid = this.loginSevice.invalid;
   }
 
 }

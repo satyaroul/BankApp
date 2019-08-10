@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { APIcallsService } from 'src/app/services/apicalls.service';
 import { newTransactionModal } from './new-transaction.modal';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-transaction',
@@ -10,13 +11,14 @@ import { newTransactionModal } from './new-transaction.modal';
 })
 export class NewTransactionComponent implements OnInit {
   reference: any;
-  resData : any;
-  ID : string;
-  cus_name : string;
-  address : string;
-  cell : number;
+  resData: any;
+  ID: string;
+  cus_name: string;
+  address: string;
+  cell: number;
+  res: any;
   t_currency = ['AED', 'EUR', 'CHF', 'MUR', 'USD'];
-  constructor(private apicallservice: APIcallsService) { }
+  constructor(private apicallservice: APIcallsService, private route: Router) { }
 
   ngOnInit() {
     var rightNow = new Date();
@@ -31,24 +33,24 @@ export class NewTransactionComponent implements OnInit {
 
     this.apicallservice.POSTSubmitingNewTransactions(form.value)
       .subscribe(response => {
-        console.log(response);
+        this.res = response;
+        if (this.res.status == "success") {
+          window.alert('Transaction successful, Transaction Reference ID: ' + this.reference);
+          this.route.navigate(['/overview/transactions']);
+        }
 
       });
   }
   prefill() {
-    this.apicallservice.GETDetailsByID(this.ID).subscribe( res=>{
-      console.log(res);
-      this.resData = res;
-      console.log(this.resData.CUST_INFO.COUNTRY);
-      this.address = this.resData.CUST_INFO.COUNTRY;
-      this.cus_name = this.resData.CUST_INFO.SHORT_NAME;
-      // var x = this.resData.CUST_INFO.CONTACT_INFO_V7;
-      // var y = x.PHONE_LIST_ITEM_V7;
-      // var z = y.PHONE;
-      // console.log(z);
-      // this.cell = x;
-    });
-    console.log("value entered now search")
+    if (this.ID.length >= 5) {
+      this.apicallservice.GETDetailsByID(this.ID).subscribe(res => {
+        console.log(res);
+        this.resData = res;
+        console.log(this.resData.CUST_INFO.COUNTRY);
+        this.address = this.resData.CUST_INFO.COUNTRY;
+        this.cus_name = this.resData.CUST_INFO.SHORT_NAME;
+      });
+    }
   }
 
 }

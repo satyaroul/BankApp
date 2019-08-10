@@ -4,14 +4,17 @@ import { Routes ,RouterModule} from '@angular/router';
 import { NewTransactionComponent } from './components/new-transaction/new-transaction.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { LoginComponent } from './components/login/login.component';
+import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login' ,pathMatch:'full'},
-  {path: 'login' , component:LoginComponent}
-
-  { path: 'newTransaction', component: NewTransactionComponent },
-  { path: 'transactions' , component: TransactionsComponent }
-
+  {path: 'login' , component: LoginComponent},
+  {path: 'overview' , component: AppLayoutComponent , children:[
+    { path: '', component: HomeComponent },
+    { path: 'newTransaction', component: NewTransactionComponent },
+    { path: 'transactions' , component: TransactionsComponent }
+  ]
+  },
 ];
 
 @NgModule({

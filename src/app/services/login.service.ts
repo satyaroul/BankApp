@@ -7,7 +7,7 @@ import { APIcallsService } from './apicalls.service';
   providedIn: 'root'
 })
 export class LoginService {
-  isLogged = true;
+  isLogged = false;
   loginToken : Number;
   constructor(private http: HttpClient, private APIs: APIcallsService) { }
 

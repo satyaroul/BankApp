@@ -1,6 +1,7 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { LogData } from './logdata.model';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +11,7 @@ export class LoginComponent implements DoCheck {
   id: string;
   password: string
   loginToken: number;
-  constructor(private loginSevice: LoginService) { }
+  constructor(private loginSevice: LoginService, private route : Router) { }
 
   Login() {
     console.log(this.id + this.password);
@@ -19,6 +20,7 @@ export class LoginComponent implements DoCheck {
 
   ngDoCheck(){
     console.log(this.loginSevice.loginToken);
+
   }
 
 }

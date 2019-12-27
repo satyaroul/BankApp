@@ -20,27 +20,9 @@
     </div>
 
     <div class="col-6" style="margin-top: 17%;">
-      <div class="card" style="width: 30rem; ">
-        <div class="card-body" style="text-align: center">
-          <h5 class="card-title">Login</h5>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-default">Login ID</span>
-            </div>
-            <input type="email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
-              [(ngModel)]="id" required>
-          </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
-            </div>
-            <input type="password" class="form-control" aria-label="Default"
-              aria-describedby="inputGroup-sizing-default" [(ngModel)]="password" required>
-          </div>
-          <button class="btn btn-primary" [disabled]="disable" (click)="Login()" type="submit">Login</button>
-          <p *ngIf="invalid" style="color: red; margin-top: 2%">Invalid Login ID or Password</p>
-        </div>
-      </div>
+      <button class="btn btn-success" (click)="selecetedLoginType(true)" style="margin-right: 40px;">Admin Login</button>
+      <button class="btn btn-primary" (click)="selecetedLoginType(false)">Customer Login</button>
+      <app-login-model *ngIf="showLoginModel" [loginType]="isAdmin"></app-login-model>
     </div>
   </div>
 </div>

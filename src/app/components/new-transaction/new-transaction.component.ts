@@ -23,7 +23,7 @@ export class NewTransactionComponent implements OnInit {
   ngOnInit() {
     var rightNow = new Date();
     var res = rightNow.toISOString().slice(0, 10).replace(/-/g, "");
-    this.reference = "CUS"+res+Math.random().toFixed(2)*100;
+    this.reference = "CUS"+res;
   }
 
   onSubmit(form: NgForm) {

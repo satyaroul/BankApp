@@ -11,6 +11,7 @@ import { TransactionsComponent } from './components/transactions/transactions.co
 import { HeaderComponent } from './components/header/header.component';
 import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginModelComponent } from './components/login/login-model/login-model.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
     TransactionsComponent,
     HeaderComponent,
     AppLayoutComponent,
+    LoginModelComponent,
     
   ],
   imports: [

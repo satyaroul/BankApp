@@ -11,6 +11,7 @@ export class APIcallsService {
 
   GETLogin(){
     return this.http.get('https://ngdemoapi.getsandbox.com/login');
+    console.log(this.http.get('https://my-first-api-27588.firebaseio.com/'));
   }
   GETSubmittedTransactions(){
     return this.http.get('https://ngdemoapi.getsandbox.com/getSubmitedTransactions');

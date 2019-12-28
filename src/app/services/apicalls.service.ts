@@ -68,7 +68,7 @@ export class APIcallsService {
   }
 
   PUTCustomerAddress(custid, data){
-    return this.http.put(+this.baseURL+'customers/'+custid+'/address.json',data);
+    return this.http.put(this.baseURL+'customers/'+custid+'/address.json',data);
   }
 
   PUTCustomerPhone(custid, data){

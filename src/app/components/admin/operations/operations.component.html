@@ -1,0 +1,45 @@
+<div class="container" style="margin-top: 40px;">
+  <div class="row">
+    <div class="col-lg-6">
+      <app-sign-up [title]="title"></app-sign-up>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <h4>Add New branch</h4>
+        </div>
+        <div class="card-body">
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Branch Name</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newBranch.name" >
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Address</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newBranch.address">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Contact</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newBranch.contact">
+            </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">IFSC</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm" [(ngModel)]="newBranch.IFSC">
+          </div>
+          <button class="btn btn-primary float-right" (click)="addBranch()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

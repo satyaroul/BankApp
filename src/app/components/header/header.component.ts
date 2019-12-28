@@ -8,10 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+isAdmin : boolean;
   constructor(private loginService: LoginService, private route : Router) { }
 
   ngOnInit() {
+    this.isAdmin= this.loginService.isAdmin;
+    console.log(this.isAdmin);
   }
   Logout(){
     this.loginService.isLogged = false;

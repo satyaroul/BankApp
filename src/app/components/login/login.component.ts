@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  title = "Sign Up";
   showLoginModel = false;
   isAdmin = false;
   ngOnInit() { }

@@ -41,16 +41,16 @@ export class NewTransactionComponent implements OnInit {
 
       });
   }
-  prefill() {
-    if (this.ID.length >= 5) {
-      this.apicallservice.GETDetailsByID(this.ID).subscribe(res => {
-        console.log(res);
-        this.resData = res;
-        console.log(this.resData.CUST_INFO.COUNTRY);
-        this.address = this.resData.CUST_INFO.COUNTRY;
-        this.cus_name = this.resData.CUST_INFO.SHORT_NAME;
-      });
-    }
-  }
+  // prefill() {
+  //   if (this.ID.length >= 5) {
+  //     this.apicallservice.GETDetailsByID(this.ID).subscribe(res => {
+  //       console.log(res);
+  //       this.resData = res;
+  //       console.log(this.resData.CUST_INFO.COUNTRY);
+  //       this.address = this.resData.CUST_INFO.COUNTRY;
+  //       this.cus_name = this.resData.CUST_INFO.SHORT_NAME;
+  //     });
+  //   }
+  // }
 
 }

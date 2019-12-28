@@ -1,0 +1,220 @@
+{
+    "customers": [
+        {
+            "name": "satya",
+            "dob": "22-04-1993",
+            "phone": 8763284143,
+            "address": "vishal nagar",
+            "branch": "hinjewadi",
+            "IFSC": "ABC0005",
+            "email": "spr92",
+            "password": "test123",
+            "balance": 12000,
+            "transactions": [
+                {
+                    "type": "debit",
+                    "amount": 5000,
+                    "date": "12-12-2019",
+                    "to": "nadeem",
+                    "from": ""
+                },
+                {
+                    "type": "credit",
+                    "amount": 3000,
+                    "date": "15-12-2019",
+                    "to": "",
+                    "from": "nadeem"
+                },
+                {
+                    "type": "debit",
+                    "amount": 5000,
+                    "date": "12-12-2019",
+                    "to": "sai",
+                    "from": ""
+                }
+            ],
+            "beneficiary":[
+                {
+                    "name":"nadeem",
+                    "accountNo":12345678,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                },
+                {
+                    "name":"sai",
+                    "accountNo":123458,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                },
+                {
+                    "name":"dipti",
+                    "accountNo":1234567809,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                }
+            ]
+        },
+        {
+            "name": "sai",
+            "dob": "21-04-1998",
+            "phone": 8763284143,
+            "address": "vishal nagar",
+            "branch": "hinjewadi",
+            "IFSC": "ABC0005",
+            "email": "sks95",
+            "password": "test123",
+            "balance": 12000,
+            "transactions": [
+                {
+                    "type": "debit",
+                    "amount": 5000,
+                    "date": "12-12-2019",
+                    "to": "nadeem",
+                    "from": ""
+                },
+                {
+                    "type": "credit",
+                    "amount": 3000,
+                    "date": "15-12-2019",
+                    "to": "",
+                    "from": "nadeem"
+                },
+                {
+                    "type": "debit",
+                    "amount": 5000,
+                    "date": "12-12-2019",
+                    "to": "sai",
+                    "from": ""
+                }
+            ],
+            "beneficiary":[
+                {
+                    "name":"nadeem",
+                    "accountNo":12345678,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                },
+                {
+                    "name":"satya",
+                    "accountNo":123458,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                },
+                {
+                    "name":"dipti",
+                    "accountNo":1234567809,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                }
+            ]
+        },
+        {
+            "name": "dipti",
+            "dob": "22-04-1993",
+            "phone": 8763284143,
+            "address": "vishal nagar",
+            "branch": "hinjewadi",
+            "IFSC": "ABC0005",
+            "email": "drr93",
+            "password": "test123",
+            "balance": 12000,
+            "transactions": [
+                {
+                    "type": "debit",
+                    "amount": 5000,
+                    "date": "12-12-2019",
+                    "to": "nadeem",
+                    "from": ""
+                },
+                {
+                    "type": "credit",
+                    "amount": 3000,
+                    "date": "15-12-2019",
+                    "to": "",
+                    "from": "nadeem"
+                },
+                {
+                    "type": "debit",
+                    "amount": 5000,
+                    "date": "12-12-2019",
+                    "to": "sai",
+                    "from": ""
+                }
+            ],
+            "beneficiary":[
+                {
+                    "name":"nadeem",
+                    "accountNo":12345678,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                },
+                {
+                    "name":"sai",
+                    "accountNo":123458,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                },
+                {
+                    "name":"satya",
+                    "accountNo":1234567809,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                }
+            ]
+        },
+        {
+            "name": "nadeem",
+            "dob": "22-04-1993",
+            "phone": 8763284143,
+            "address": "vishal nagar",
+            "branch": "hinjewadi",
+            "IFSC": "ABC0005",
+            "email": "nk95",
+            "password": "test123",
+            "balance": 12000,
+            "transactions": [
+                {
+                    "type": "debit",
+                    "amount": 5000,
+                    "date": "12-12-2019",
+                    "to": "sai",
+                    "from": ""
+                },
+                {
+                    "type": "credit",
+                    "amount": 3000,
+                    "date": "15-12-2019",
+                    "to": "",
+                    "from": "dipti"
+                },
+                {
+                    "type": "debit",
+                    "amount": 5000,
+                    "date": "12-12-2019",
+                    "to": "sai",
+                    "from": ""
+                }
+            ],
+            "beneficiary":[
+                {
+                    "name":"satya",
+                    "accountNo":12345678,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                },
+                {
+                    "name":"sai",
+                    "accountNo":123458,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                },
+                {
+                    "name":"dipti",
+                    "accountNo":1234567809,
+                    "phone":7008581966,
+                    "ifsc":"XYZ00087"
+                }
+            ]
+        }
+    ]
+}

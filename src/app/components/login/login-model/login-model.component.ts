@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-model.component.css']
 })
 export class LoginModelComponent implements DoCheck {
-  @Input() loginType: Boolean;
+  @Input() loginType: boolean;
   id: string;
   password: string;
   loginToken: string;
@@ -20,6 +20,7 @@ export class LoginModelComponent implements DoCheck {
   Login() {
     console.log(this.id + this.password);
     this.loginSevice.login(this.id, this.password);
+    this.loginSevice.isAdmin = this.loginType;
 
   }
 

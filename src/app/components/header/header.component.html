@@ -5,15 +5,24 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/overview" routerLinkActive="router-link-active" >Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/customer-overview" routerLinkActive="router-link-active" *ngIf="!isAdmin" >Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/overview/transactions" routerLinkActive="router-link-active" >Transactions</a>
+        <a class="nav-link" routerLink="/customer-overview/transactions" routerLinkActive="active" *ngIf="!isAdmin">Transactions</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/overview/newTransaction" routerLinkActive="router-link-active" >New Transaction</a>
-      </li>     
+        <a class="nav-link" routerLink="/customer-overview/newTransaction" routerLinkActive="active" *ngIf="!isAdmin">New Transaction</a>
+      </li>   
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin-overview" routerLinkActive="router-link-active" *ngIf="isAdmin">Admin Dashboard</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/admin-overview/branches" routerLinkActive="router-link-active" *ngIf="isAdmin">Branches</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin-overview/operations" routerLinkActive="active" *ngIf="isAdmin">Admin Operations</a>
+      </li>   
     </ul>
   </div>
   <div class="float-right"><button class="btn btn-danger" (click)="Logout()">Log out</button></div>

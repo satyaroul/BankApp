@@ -1,11 +1,11 @@
 <div class="container">
-  <h4 style="text-align: center; margin-top: 5%">Welcome to the Bank application</h4>
-  <div class="row justify-content-center">
+  <h4 style="text-align: center; margin-top: 20px;margin-bottom: 30px;">Welcome to the Bank application</h4>
+  <div class="row">
 
-    <div class="col-6" style="margin-top: 10%; padding-left: 5px">
+    <div class="col-md-6">
 
-      <div class="card" style="width: 30rem;">
-        <div class="card-body" style="text-align: center">
+      <div class="card">
+        <div class="card-body">
           <div class="input-group mb-3">
             <h3>About to the Bank application</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore praesentium id reprehenderit itaque
@@ -19,10 +19,30 @@
       </div>
     </div>
 
-    <div class="col-6" style="margin-top: 17%;">
-      <button class="btn btn-success" (click)="selecetedLoginType(true)" style="margin-right: 40px;">Admin Login</button>
-      <button class="btn btn-primary" (click)="selecetedLoginType(false)">Customer Login</button>
+    <div class="col-md-6" style="text-align: center;">
+      <button class="btn btn-info" (click)="selecetedLoginType(true)" style="margin-right: 20px;">Admin Login</button>
+      <button class="btn btn-primary" (click)="selecetedLoginType(false)" style="margin-right: 20px;">Customer
+        Login</button>
+      <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Sign Up</button>
       <app-login-model *ngIf="showLoginModel" [loginType]="isAdmin"></app-login-model>
+    </div>
+  </div>
+</div>
+
+<!-- Sign up Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hola!! Please fill your details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-sign-up [title]="title"></app-sign-up>
+      </div>
     </div>
   </div>
 </div>

@@ -7,6 +7,7 @@ import {newTransactionModal} from '../components/new-transaction/new-transaction
 })
 export class APIcallsService {
   baseURL = 'https://demoapi-d082a.firebaseio.com/';
+
   constructor(private http :HttpClient) { }
 
   GETLogin(){
@@ -19,10 +20,10 @@ export class APIcallsService {
     return this.http.get('https://ngdemoapi.getsandbox.com/login')
   }
 
-  POSTSubmitingNewTransactions(newtrx){
-    // return this.http.post('https://ngdemoapi.getsandbox.com/saveTransaction',newtrx);
-    return this.http.post('https://ngdemoapi.getsandbox.com/saveTransaction',newtrx);
-  }
+  // POSTSubmitingNewTransactions(newtrx){
+  //   // return this.http.post('https://ngdemoapi.getsandbox.com/saveTransaction',newtrx);
+  //   return this.http.post('https://ngdemoapi.getsandbox.com/saveTransaction',newtrx);
+  // }
 
   GETCustomerDetailsByID(ID){
     // return this.http.get('https://ngdemoapi.getsandbox.com/customerById/'+ID);
@@ -81,6 +82,14 @@ export class APIcallsService {
 
   PUTBranchPhone(branchid, data){
     return this.http.put(this.baseURL+'branches/'+branchid+'/contact.json',data);
+  }
+
+  POSTSubmitingNewTransactions(newtrx){
+    return this.http.post('https://ngdemoapi.getsandbox.com/saveTransaction',newtrx);
+  }
+
+  GETDetailsByID(ID : string){
+    return this.http.get('https://ngdemoapi.getsandbox.com/customerById/'+ID);
   }
 }
 

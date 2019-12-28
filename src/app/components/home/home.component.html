@@ -51,7 +51,7 @@
                 </tr>
                 <tr>
                   <th>Branch</th>
-                  <td>{{ customerData.address }}</td>
+                  <td>{{ customerData.branch }}</td>
                 </tr>
                 <tr>
                   <th>IFSC Code</th>
@@ -83,7 +83,7 @@
                   <th scope="col">Account Number</th>
                   <th scope="col">IFSC</th>
                   <th scope="col">Contact Number</th>
-                  <th scope="col">Edit / Remove</th>
+                  <th scope="col">Remove</th>
                 </tr>
               </thead>
               <tbody>
@@ -93,7 +93,6 @@
                   <td>{{ data.value.ifsc }}</td>
                   <td>{{ data.value.phone }}</td>
                   <td>
-                    <button class="btn btn-outline-info btn-sm">Edit</button> /
                     <button class="btn btn-danger btn-sm" (click)="delete(data.key)">Delete</button>
                   </td>
                 </tr>
